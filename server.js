@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/', (req,res) => {
-    res.send(postgres.select('*').from('users').orderBy('asc'));
+    res.send('it is working');
 })
 
 app.post('/signin', (req,res) => {signIn.handleSignIn(req,res,postgres,bcrypt)})
